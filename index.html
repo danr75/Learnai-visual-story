@@ -354,16 +354,24 @@
         </p>
       </header>
 
-      <div class="flow flow--agent reveal">
-        <div class="flow__node" data-step="1"><div class="flow__dot"><span class="material-symbols-rounded">flag</span></div><h4>Goal</h4><p>“Schedule the renewals”</p></div>
-        <div class="flow__line"><span class="flow__pulse"></span></div>
-        <div class="flow__node" data-step="2"><div class="flow__dot"><span class="material-symbols-rounded">checklist</span></div><h4>Planning</h4><p>Breaks it into steps</p></div>
-        <div class="flow__line"><span class="flow__pulse"></span></div>
-        <div class="flow__node" data-step="3"><div class="flow__dot"><span class="material-symbols-rounded">build</span></div><h4>Tool use</h4><p>Checks the calendar</p></div>
-        <div class="flow__line"><span class="flow__pulse"></span></div>
-        <div class="flow__node" data-step="4"><div class="flow__dot"><span class="material-symbols-rounded">settings</span></div><h4>Action</h4><p>Drafts the bookings</p></div>
-        <div class="flow__line flow__line--gate"><span class="flow__pulse"></span></div>
-        <div class="flow__node flow__node--gate" data-step="5"><div class="flow__dot"><span class="material-symbols-rounded">front_hand</span></div><h4>Human approval</h4><p>You say go / no-go</p></div>
+      <div class="agent-diagram">
+        <div class="flow flow--agent reveal">
+          <div class="flow__node" data-step="1"><div class="flow__dot"><span class="material-symbols-rounded">flag</span></div><h4>Goal</h4><p>“Schedule the renewals”</p></div>
+          <div class="flow__line"><span class="flow__pulse"></span></div>
+          <div class="flow__node" data-step="2"><div class="flow__dot"><span class="material-symbols-rounded">checklist</span></div><h4>Planning</h4><p>Breaks it into steps</p></div>
+          <div class="flow__line"><span class="flow__pulse"></span></div>
+          <div class="flow__node" data-step="3"><div class="flow__dot"><span class="material-symbols-rounded">build</span></div><h4>Tool use</h4><p>Checks the calendar</p></div>
+          <div class="flow__line"><span class="flow__pulse"></span></div>
+          <div class="flow__node" data-step="4"><div class="flow__dot"><span class="material-symbols-rounded">settings</span></div><h4>Action</h4><p>Drafts the bookings</p></div>
+          <div class="flow__line flow__line--gate"><span class="flow__pulse"></span></div>
+          <div class="flow__node flow__node--gate" data-step="5"><div class="flow__dot"><span class="material-symbols-rounded">front_hand</span></div><h4>Human approval</h4><p>You say go / no-go</p></div>
+        </div>
+
+        <!-- Memory / context layer — underpins the whole working loop -->
+        <div class="agent-memory reveal">
+          <span class="material-symbols-rounded agent-memory__icon">memory</span>
+          <p><strong>Memory / context</strong> — the agent keeps the goal, its plan and each step's results in mind across the whole task.</p>
+        </div>
       </div>
 
       <aside class="human-role reveal">
@@ -502,16 +510,12 @@
         <h3 class="discussion__title">Let's discuss</h3>
         <div class="discussion__cards">
           <div class="q-card"><span class="q-card__num">1</span><p>What work could AI support in your area?</p></div>
-          <div class="q-card"><span class="q-card__num">2</span><p>What must humans still own?</p></div>
-          <div class="q-card"><span class="q-card__num">3</span><p>What risks need oversight?</p></div>
+          <div class="q-card"><span class="q-card__num">2</span><p>How might AI change the way you work?</p></div>
+          <div class="q-card"><span class="q-card__num">3</span><p>What responsibilities remain yours when using AI?</p></div>
         </div>
       </div>
 
       <a href="#hero" class="btn btn--ghost reveal">↑ Back to the top</a>
-
-      <footer class="site-footer">
-        <p>Beginner AI session · Built for public sector &amp; business teams</p>
-      </footer>
     </div>
   </section>
 
