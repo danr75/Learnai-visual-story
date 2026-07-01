@@ -95,19 +95,104 @@
       </div>
 
       <!-- =========================================================== -->
-      <!-- YOUTUBE — everyday AI intro video                            -->
+      <!-- EVERYDAY AI — representative illustration (self-contained)    -->
+      <!-- A phone whose everyday apps are quietly powered by AI.        -->
       <!-- =========================================================== -->
-      <div class="video-embed reveal">
-        <div class="video-embed__frame">
-          <iframe
-            src="https://www.youtube.com/embed/ZHCB09O6zUk?rel=0"
-            title="Everyday AI examples — intro video"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            loading="lazy"></iframe>
-        </div>
-      </div>
+      <figure class="everyday-visual reveal">
+        <svg viewBox="0 0 1000 460" role="img" aria-labelledby="everydayTitle everydayDesc" preserveAspectRatio="xMidYMid meet">
+          <title id="everydayTitle">The everyday apps in your pocket are already powered by AI</title>
+          <desc id="everydayDesc">A smartphone with an on-screen AI assistant, surrounded by everyday notifications: a show recommendation, a filtered spam email, the fastest route and a protected payment.</desc>
+          <defs>
+            <linearGradient id="evBrand" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#22d3ee" />
+              <stop offset="0.5" stop-color="#8b5cf6" />
+              <stop offset="1" stop-color="#ec4899" />
+            </linearGradient>
+            <linearGradient id="evScreen" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#141c3a" />
+              <stop offset="1" stop-color="#0b1020" />
+            </linearGradient>
+            <radialGradient id="evGlowA" cx="0.5" cy="0.5" r="0.5">
+              <stop offset="0" stop-color="#22d3ee" stop-opacity="0.35" />
+              <stop offset="1" stop-color="#22d3ee" stop-opacity="0" />
+            </radialGradient>
+            <radialGradient id="evGlowB" cx="0.5" cy="0.5" r="0.5">
+              <stop offset="0" stop-color="#8b5cf6" stop-opacity="0.32" />
+              <stop offset="1" stop-color="#8b5cf6" stop-opacity="0" />
+            </radialGradient>
+          </defs>
+
+          <!-- ambient glows -->
+          <ellipse cx="300" cy="150" rx="320" ry="220" fill="url(#evGlowA)" />
+          <ellipse cx="720" cy="330" rx="320" ry="220" fill="url(#evGlowB)" />
+
+          <!-- connector threads from phone to each notification -->
+          <g stroke="#2a3766" stroke-width="1.5" stroke-dasharray="3 5" fill="none" opacity="0.8">
+            <path d="M430 150 C 350 130, 300 118, 250 112" />
+            <path d="M570 150 C 650 130, 720 120, 770 116" />
+            <path d="M430 320 C 350 340, 300 350, 250 356" />
+            <path d="M570 320 C 660 340, 720 348, 772 352" />
+          </g>
+
+          <!-- phone -->
+          <g transform="translate(500 232)">
+            <rect x="-78" y="-158" width="156" height="316" rx="28" fill="#0b1020" stroke="url(#evBrand)" stroke-width="2" />
+            <rect x="-66" y="-140" width="132" height="280" rx="16" fill="url(#evScreen)" />
+            <rect x="-16" y="-133" width="32" height="7" rx="3.5" fill="#2a3766" />
+
+            <!-- AI assistant spark -->
+            <circle cx="0" cy="-74" r="30" fill="none" stroke="#22d3ee" stroke-opacity="0.28" stroke-width="1.5" />
+            <circle cx="0" cy="-74" r="20" fill="none" stroke="#22d3ee" stroke-opacity="0.5" stroke-width="1.5" />
+            <path d="M0 -90 L4 -78 L16 -74 L4 -70 L0 -58 L-4 -70 L-16 -74 L-4 -78 Z" fill="url(#evBrand)" />
+
+            <!-- assistant reply lines -->
+            <rect x="-46" y="-30" width="92" height="9" rx="4.5" fill="#2a3766" />
+            <rect x="-46" y="-12" width="70" height="9" rx="4.5" fill="#22304f" />
+
+            <!-- equaliser / listening -->
+            <g fill="#22d3ee">
+              <rect x="-30" y="16" width="7" height="20" rx="3.5" opacity="0.9" />
+              <rect x="-16" y="8"  width="7" height="36" rx="3.5" />
+              <rect x="-2"  y="18" width="7" height="16" rx="3.5" opacity="0.9" />
+              <rect x="12"  y="6"  width="7" height="40" rx="3.5" />
+              <rect x="26"  y="20" width="7" height="12" rx="3.5" opacity="0.85" />
+            </g>
+
+            <!-- app tiles -->
+            <g>
+              <rect x="-46" y="66"  width="40" height="40" rx="11" fill="#161e3a" stroke="#f87171" stroke-opacity="0.7" />
+              <rect x="6"   y="66"  width="40" height="40" rx="11" fill="#161e3a" stroke="#38bdf8" stroke-opacity="0.7" />
+              <rect x="-46" y="114" width="40" height="40" rx="11" fill="#161e3a" stroke="#34d399" stroke-opacity="0.7" />
+              <rect x="6"   y="114" width="40" height="40" rx="11" fill="#161e3a" stroke="#8b5cf6" stroke-opacity="0.7" />
+            </g>
+          </g>
+
+          <!-- notification pills -->
+          <g font-family="Inter, sans-serif" font-size="15" font-weight="600">
+            <g transform="translate(70 92)">
+              <rect x="0" y="-22" width="182" height="44" rx="22" fill="#161e3a" stroke="#2a3766" />
+              <circle cx="24" cy="0" r="6" fill="#ec4899" />
+              <text x="42" y="5" fill="#eaf0ff">New show for you</text>
+            </g>
+            <g transform="translate(748 94)">
+              <rect x="0" y="-22" width="182" height="44" rx="22" fill="#161e3a" stroke="#2a3766" />
+              <circle cx="24" cy="0" r="6" fill="#34d399" />
+              <text x="42" y="5" fill="#eaf0ff">Fastest route</text>
+            </g>
+            <g transform="translate(70 334)">
+              <rect x="0" y="-22" width="182" height="44" rx="22" fill="#161e3a" stroke="#2a3766" />
+              <circle cx="24" cy="0" r="6" fill="#38bdf8" />
+              <text x="42" y="5" fill="#eaf0ff">Spam filtered</text>
+            </g>
+            <g transform="translate(748 332)">
+              <rect x="0" y="-22" width="182" height="44" rx="22" fill="#161e3a" stroke="#2a3766" />
+              <circle cx="24" cy="0" r="6" fill="#8b5cf6" />
+              <text x="42" y="5" fill="#eaf0ff">Payment protected</text>
+            </g>
+          </g>
+        </svg>
+        <figcaption class="everyday-visual__cap">The apps in your pocket already run on AI — quietly, in the background.</figcaption>
+      </figure>
     </div>
   </section>
 
@@ -175,6 +260,17 @@
         <p class="section-sub">Looks at the past to estimate what is likely true — like deciding if an email is spam.</p>
 
         <div class="example-chip">Real example: your inbox sorts junk automatically.</div>
+
+        <div class="tech-note reveal" aria-label="How this AI is built">
+          <span class="tech-note__label">How it's built</span>
+          <div class="tech-note__flow">
+            <span class="tech-node">Labelled data</span>
+            <span class="tech-node">Feature extraction</span>
+            <span class="tech-node">Classifier</span>
+            <span class="tech-node">Probability</span>
+            <span class="tech-node">Threshold</span>
+          </div>
+        </div>
       </div>
 
       <!-- Flow diagram: email → model → spam / not spam -->
@@ -206,6 +302,17 @@
         <p class="section-sub">Notices what people like and suggests more of it — the engine behind Netflix and shopping sites.</p>
 
         <div class="example-chip">Real example: “Because you watched…” suggestions.</div>
+
+        <div class="tech-note reveal" aria-label="How this AI is built">
+          <span class="tech-note__label">How it's built</span>
+          <div class="tech-note__flow">
+            <span class="tech-node">Interaction history</span>
+            <span class="tech-node">User &amp; item embeddings</span>
+            <span class="tech-node">Similarity match</span>
+            <span class="tech-node">Ranking</span>
+            <span class="tech-node">Top-N list</span>
+          </div>
+        </div>
       </div>
 
       <div class="split__visual reveal">
@@ -236,6 +343,17 @@
         <p class="section-sub">Reads images and video — spotting objects, reading documents, or supporting safety checks.</p>
 
         <div class="example-chip">Real example: scanning forms or detecting hazards on site.</div>
+
+        <div class="tech-note reveal" aria-label="How this AI is built">
+          <span class="tech-note__label">How it's built</span>
+          <div class="tech-note__flow">
+            <span class="tech-node">Image pixels</span>
+            <span class="tech-node">CNN backbone</span>
+            <span class="tech-node">Feature maps</span>
+            <span class="tech-node">Detection head</span>
+            <span class="tech-node">Boxes + labels</span>
+          </div>
+        </div>
       </div>
 
       <div class="split__visual reveal">
@@ -264,6 +382,17 @@
         <p class="section-sub">Understands written and spoken words — sorting requests, finding intent, and summarising long text.</p>
 
         <div class="example-chip">Real example: routing a customer enquiry to the right team.</div>
+
+        <div class="tech-note reveal" aria-label="How this AI is built">
+          <span class="tech-note__label">How it's built</span>
+          <div class="tech-note__flow">
+            <span class="tech-node">Text</span>
+            <span class="tech-node">Tokeniser</span>
+            <span class="tech-node">Transformer encoder</span>
+            <span class="tech-node">Intent / entities</span>
+            <span class="tech-node">Structured output</span>
+          </div>
+        </div>
       </div>
 
       <div class="split__visual reveal">
@@ -289,6 +418,17 @@
         <p class="section-sub">Creates brand-new content — text, images or code — from a simple instruction called a prompt.</p>
 
         <div class="example-chip">Real example: drafting a first version of a letter or report.</div>
+
+        <div class="tech-note reveal" aria-label="How this AI is built">
+          <span class="tech-note__label">How it's built</span>
+          <div class="tech-note__flow">
+            <span class="tech-node">Prompt</span>
+            <span class="tech-node">Tokeniser</span>
+            <span class="tech-node">LLM decoder</span>
+            <span class="tech-node">Token sampling</span>
+            <span class="tech-node">Generated content</span>
+          </div>
+        </div>
       </div>
 
       <div class="split__visual reveal">
