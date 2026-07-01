@@ -11,6 +11,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
+  <!-- Material Symbols (Google's Material Design icons) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded&display=swap" />
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -42,10 +45,6 @@
     <div class="hero__content reveal">
       <span class="eyebrow">A 40-minute beginner session</span>
       <h1 class="hero__title">AI is already changing<br /><span class="grad-text">how work gets done</span></h1>
-      <p class="hero__lede">
-        No code. No jargon. Just a clear story about what AI is, how it works,
-        and what it means for your team, your customers and your partners.
-      </p>
       <div class="hero__cta">
         <a href="#everyday" class="btn btn--primary">Start the story</a>
         <a href="#closing" class="btn btn--ghost">Jump to discussion</a>
@@ -66,60 +65,48 @@
       <header class="section-head reveal">
         <span class="section-num">01</span>
         <h2>You already use AI every day</h2>
-        <p class="section-sub">
-          AI is not science fiction. It quietly powers services you rely on —
-          often without you noticing.
-        </p>
       </header>
 
       <div class="card-grid">
         <!-- Each card is a floating 3D panel that tilts toward the cursor -->
         <article class="tilt-card reveal" data-accent="red">
-          <div class="tilt-card__icon">🎬</div>
+          <div class="tilt-card__icon"><span class="material-symbols-rounded">movie</span></div>
           <h3>Netflix recommendations</h3>
           <p>Suggests the next show by learning from what millions of viewers watch.</p>
         </article>
 
         <article class="tilt-card reveal" data-accent="blue">
-          <div class="tilt-card__icon">✉️</div>
+          <div class="tilt-card__icon"><span class="material-symbols-rounded">mark_email_unread</span></div>
           <h3>Email spam filtering</h3>
           <p>Sorts junk from real mail by spotting patterns in billions of messages.</p>
         </article>
 
         <article class="tilt-card reveal" data-accent="green">
-          <div class="tilt-card__icon">🗺️</div>
+          <div class="tilt-card__icon"><span class="material-symbols-rounded">map</span></div>
           <h3>Maps &amp; routing</h3>
           <p>Predicts traffic and the fastest route using live and historic data.</p>
         </article>
 
         <article class="tilt-card reveal" data-accent="violet">
-          <div class="tilt-card__icon">🛡️</div>
+          <div class="tilt-card__icon"><span class="material-symbols-rounded">verified_user</span></div>
           <h3>Fraud detection</h3>
           <p>Flags unusual card activity in milliseconds to protect your money.</p>
         </article>
       </div>
 
-      <!-- Human role callout -->
-      <aside class="human-role reveal">
-        <div class="human-role__badge">Human role</div>
-        <p>People decide <strong>which problems are worth solving</strong> and set the rules these everyday systems must follow.</p>
-      </aside>
-
       <!-- =========================================================== -->
-      <!-- YOUTUBE PLACEHOLDER — replace VIDEO_ID below                 -->
-      <!-- e.g. https://www.youtube.com/embed/dQw4w9WgXcQ               -->
+      <!-- YOUTUBE — everyday AI intro video                            -->
       <!-- =========================================================== -->
       <div class="video-embed reveal">
         <div class="video-embed__frame">
           <iframe
-            src="https://www.youtube.com/embed/VIDEO_ID_HERE?rel=0"
+            src="https://www.youtube.com/embed/ZHCB09O6zUk?rel=0"
             title="Everyday AI examples — intro video"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
             loading="lazy"></iframe>
         </div>
-        <p class="video-embed__caption">▶ Optional video — replace <code>VIDEO_ID_HERE</code> in index.html</p>
       </div>
     </div>
   </section>
@@ -141,35 +128,35 @@
       <!-- Animated flow: data → model → prediction → outcome → feedback -->
       <div class="flow flow--loop reveal" id="coreLoop">
         <div class="flow__node" data-step="1">
-          <div class="flow__dot">📊</div>
+          <div class="flow__dot"><span class="material-symbols-rounded">database</span></div>
           <h4>Data</h4>
           <p>Examples to learn from</p>
         </div>
         <div class="flow__line"><span class="flow__pulse"></span></div>
 
         <div class="flow__node" data-step="2">
-          <div class="flow__dot">🧠</div>
+          <div class="flow__dot"><span class="material-symbols-rounded">psychology</span></div>
           <h4>Model</h4>
           <p>Spots the patterns</p>
         </div>
         <div class="flow__line"><span class="flow__pulse"></span></div>
 
         <div class="flow__node" data-step="3">
-          <div class="flow__dot">🎯</div>
+          <div class="flow__dot"><span class="material-symbols-rounded">ads_click</span></div>
           <h4>Prediction</h4>
           <p>Makes a best guess</p>
         </div>
         <div class="flow__line"><span class="flow__pulse"></span></div>
 
         <div class="flow__node" data-step="4">
-          <div class="flow__dot">✅</div>
+          <div class="flow__dot"><span class="material-symbols-rounded">check_circle</span></div>
           <h4>Outcome</h4>
           <p>An action or answer</p>
         </div>
         <div class="flow__line flow__line--feedback"><span class="flow__pulse"></span></div>
 
         <div class="flow__node" data-step="5">
-          <div class="flow__dot">🔁</div>
+          <div class="flow__dot"><span class="material-symbols-rounded">autorenew</span></div>
           <h4>Feedback</h4>
           <p>Learns &amp; improves</p>
         </div>
@@ -204,14 +191,14 @@
       <div class="split__visual reveal">
         <div class="mini-flow">
           <div class="mini-flow__in">
-            <span class="tag tag--neutral">📧 Incoming email</span>
+            <span class="tag tag--neutral"><span class="material-symbols-rounded">mail</span> Incoming email</span>
           </div>
-          <div class="mini-flow__arrow">▼</div>
-          <div class="mini-flow__model">🧠 Spam model<br /><small>checks words, sender, links</small></div>
-          <div class="mini-flow__arrow">▼</div>
+          <div class="mini-flow__arrow"><span class="material-symbols-rounded">arrow_downward</span></div>
+          <div class="mini-flow__model"><span class="material-symbols-rounded">psychology</span> Spam model<br /><small>checks words, sender, links</small></div>
+          <div class="mini-flow__arrow"><span class="material-symbols-rounded">arrow_downward</span></div>
           <div class="mini-flow__out">
-            <span class="tag tag--bad">🚫 Spam (98%)</span>
-            <span class="tag tag--good">📥 Inbox (2%)</span>
+            <span class="tag tag--bad"><span class="material-symbols-rounded">block</span> Spam (98%)</span>
+            <span class="tag tag--good"><span class="material-symbols-rounded">inbox</span> Inbox (2%)</span>
           </div>
         </div>
       </div>
@@ -239,7 +226,7 @@
       <div class="split__visual reveal">
         <!-- Faux Netflix-style recommendation rail -->
         <div class="rec-panel">
-          <div class="rec-panel__profile">👤 Watched: documentaries, sci-fi</div>
+          <div class="rec-panel__profile"><span class="material-symbols-rounded">person</span> Watched: documentaries, sci-fi</div>
           <div class="rec-panel__row">
             <!-- Replace these with real <img> thumbnails if you like -->
             <div class="rec-tile" style="--c:#6d28d9">Match 96%</div>
@@ -307,7 +294,7 @@
       <div class="split__visual reveal">
         <div class="nlp-flow">
           <div class="nlp-flow__bubble">“My payment failed twice and I'm worried.”</div>
-          <div class="mini-flow__arrow">▼</div>
+          <div class="mini-flow__arrow"><span class="material-symbols-rounded">arrow_downward</span></div>
           <div class="nlp-flow__stage"><strong>Intent:</strong> Billing problem</div>
           <div class="nlp-flow__stage"><strong>Classification:</strong> Urgent · Frustrated</div>
           <div class="nlp-flow__stage"><strong>Summary:</strong> Repeated failed payment, needs reassurance.</div>
@@ -340,13 +327,13 @@
             <span class="tag tag--neutral">Prompt</span>
             <p>“Write a friendly reminder about renewing a licence.”</p>
           </div>
-          <div class="mini-flow__arrow">▼</div>
-          <div class="gen-flow__model">🧠 Generative model</div>
-          <div class="mini-flow__arrow">▼</div>
+          <div class="mini-flow__arrow"><span class="material-symbols-rounded">arrow_downward</span></div>
+          <div class="gen-flow__model"><span class="material-symbols-rounded">psychology</span> Generative model</div>
+          <div class="mini-flow__arrow"><span class="material-symbols-rounded">arrow_downward</span></div>
           <div class="gen-flow__outputs">
-            <span class="tag tag--good">📝 Text</span>
-            <span class="tag tag--good">🖼️ Image</span>
-            <span class="tag tag--good">💻 Code</span>
+            <span class="tag tag--good"><span class="material-symbols-rounded">description</span> Text</span>
+            <span class="tag tag--good"><span class="material-symbols-rounded">image</span> Image</span>
+            <span class="tag tag--good"><span class="material-symbols-rounded">code</span> Code</span>
           </div>
         </div>
       </div>
@@ -367,16 +354,24 @@
         </p>
       </header>
 
-      <div class="flow flow--agent reveal">
-        <div class="flow__node" data-step="1"><div class="flow__dot">🎯</div><h4>Goal</h4><p>“Schedule the renewals”</p></div>
-        <div class="flow__line"><span class="flow__pulse"></span></div>
-        <div class="flow__node" data-step="2"><div class="flow__dot">🗂️</div><h4>Planning</h4><p>Breaks it into steps</p></div>
-        <div class="flow__line"><span class="flow__pulse"></span></div>
-        <div class="flow__node" data-step="3"><div class="flow__dot">🔧</div><h4>Tool use</h4><p>Checks the calendar</p></div>
-        <div class="flow__line"><span class="flow__pulse"></span></div>
-        <div class="flow__node" data-step="4"><div class="flow__dot">⚙️</div><h4>Action</h4><p>Drafts the bookings</p></div>
-        <div class="flow__line flow__line--gate"><span class="flow__pulse"></span></div>
-        <div class="flow__node flow__node--gate" data-step="5"><div class="flow__dot">🙋</div><h4>Human approval</h4><p>You say go / no-go</p></div>
+      <div class="agent-diagram">
+        <div class="flow flow--agent reveal">
+          <div class="flow__node" data-step="1"><div class="flow__dot"><span class="material-symbols-rounded">flag</span></div><h4>Goal</h4><p>“Schedule the renewals”</p></div>
+          <div class="flow__line"><span class="flow__pulse"></span></div>
+          <div class="flow__node" data-step="2"><div class="flow__dot"><span class="material-symbols-rounded">checklist</span></div><h4>Planning</h4><p>Breaks it into steps</p></div>
+          <div class="flow__line"><span class="flow__pulse"></span></div>
+          <div class="flow__node" data-step="3"><div class="flow__dot"><span class="material-symbols-rounded">build</span></div><h4>Tool use</h4><p>Checks the calendar</p></div>
+          <div class="flow__line"><span class="flow__pulse"></span></div>
+          <div class="flow__node" data-step="4"><div class="flow__dot"><span class="material-symbols-rounded">settings</span></div><h4>Action</h4><p>Drafts the bookings</p></div>
+          <div class="flow__line flow__line--gate"><span class="flow__pulse"></span></div>
+          <div class="flow__node flow__node--gate" data-step="5"><div class="flow__dot"><span class="material-symbols-rounded">front_hand</span></div><h4>Human approval</h4><p>You say go / no-go</p></div>
+        </div>
+
+        <!-- Memory / context layer — underpins the whole working loop -->
+        <div class="agent-memory reveal">
+          <span class="material-symbols-rounded agent-memory__icon">memory</span>
+          <p><strong>Memory / context</strong> — the agent keeps the goal, its plan and each step's results in mind across the whole task.</p>
+        </div>
       </div>
 
       <aside class="human-role reveal">
@@ -401,12 +396,12 @@
       </header>
 
       <div class="risk-grid">
-        <div class="risk-card reveal"><span class="risk-card__ico">🔒</span><h4>Privacy</h4><p>Protect personal data and use it only as allowed.</p></div>
-        <div class="risk-card reveal"><span class="risk-card__ico">⚖️</span><h4>Bias</h4><p>Make sure outcomes are fair to every group.</p></div>
-        <div class="risk-card reveal"><span class="risk-card__ico">🎯</span><h4>Accuracy</h4><p>Check the answer is actually correct.</p></div>
-        <div class="risk-card reveal"><span class="risk-card__ico">🛟</span><h4>Safety</h4><p>Prevent harm to people and services.</p></div>
-        <div class="risk-card reveal"><span class="risk-card__ico">🛡️</span><h4>Security</h4><p>Keep systems and data protected from misuse.</p></div>
-        <div class="risk-card reveal"><span class="risk-card__ico">📋</span><h4>Accountability</h4><p>Know who is responsible for each decision.</p></div>
+        <div class="risk-card reveal"><span class="risk-card__ico"><span class="material-symbols-rounded">lock</span></span><h4>Privacy</h4><p>Protect personal data and use it only as allowed.</p></div>
+        <div class="risk-card reveal"><span class="risk-card__ico"><span class="material-symbols-rounded">balance</span></span><h4>Bias</h4><p>Make sure outcomes are fair to every group.</p></div>
+        <div class="risk-card reveal"><span class="risk-card__ico"><span class="material-symbols-rounded">target</span></span><h4>Accuracy</h4><p>Check the answer is actually correct.</p></div>
+        <div class="risk-card reveal"><span class="risk-card__ico"><span class="material-symbols-rounded">health_and_safety</span></span><h4>Safety</h4><p>Prevent harm to people and services.</p></div>
+        <div class="risk-card reveal"><span class="risk-card__ico"><span class="material-symbols-rounded">shield</span></span><h4>Security</h4><p>Keep systems and data protected from misuse.</p></div>
+        <div class="risk-card reveal"><span class="risk-card__ico"><span class="material-symbols-rounded">assignment_ind</span></span><h4>Accountability</h4><p>Know who is responsible for each decision.</p></div>
       </div>
 
       <aside class="human-role reveal">
@@ -482,11 +477,11 @@
       </header>
 
       <div class="role-grid">
-        <article class="role-card reveal"><div class="role-card__ico">🧭</div><h4>AI product owner</h4><p>Decides what AI should and shouldn't do for the service.</p></article>
-        <article class="role-card reveal"><div class="role-card__ico">🔍</div><h4>AI assurance lead</h4><p>Checks AI is safe, fair and working as intended.</p></article>
-        <article class="role-card reveal"><div class="role-card__ico">🗃️</div><h4>Data steward</h4><p>Looks after data quality, privacy and permissions.</p></article>
-        <article class="role-card reveal"><div class="role-card__ico">📈</div><h4>Automation analyst</h4><p>Finds the best tasks to automate and measures the value.</p></article>
-        <article class="role-card reveal"><div class="role-card__ico">✍️</div><h4>Prompt / workflow designer</h4><p>Shapes how people and AI work together, step by step.</p></article>
+        <article class="role-card reveal"><div class="role-card__ico"><span class="material-symbols-rounded">explore</span></div><h4>AI product owner</h4><p>Decides what AI should and shouldn't do for the service.</p></article>
+        <article class="role-card reveal"><div class="role-card__ico"><span class="material-symbols-rounded">search</span></div><h4>AI assurance lead</h4><p>Checks AI is safe, fair and working as intended.</p></article>
+        <article class="role-card reveal"><div class="role-card__ico"><span class="material-symbols-rounded">inventory_2</span></div><h4>Data steward</h4><p>Looks after data quality, privacy and permissions.</p></article>
+        <article class="role-card reveal"><div class="role-card__ico"><span class="material-symbols-rounded">trending_up</span></div><h4>Automation analyst</h4><p>Finds the best tasks to automate and measures the value.</p></article>
+        <article class="role-card reveal"><div class="role-card__ico"><span class="material-symbols-rounded">edit_note</span></div><h4>Prompt / workflow designer</h4><p>Shapes how people and AI work together, step by step.</p></article>
       </div>
 
       <aside class="human-role reveal">
@@ -515,16 +510,12 @@
         <h3 class="discussion__title">Let's discuss</h3>
         <div class="discussion__cards">
           <div class="q-card"><span class="q-card__num">1</span><p>What work could AI support in your area?</p></div>
-          <div class="q-card"><span class="q-card__num">2</span><p>What must humans still own?</p></div>
-          <div class="q-card"><span class="q-card__num">3</span><p>What risks need oversight?</p></div>
+          <div class="q-card"><span class="q-card__num">2</span><p>How might AI change the way you work?</p></div>
+          <div class="q-card"><span class="q-card__num">3</span><p>What responsibilities remain yours when using AI?</p></div>
         </div>
       </div>
 
       <a href="#hero" class="btn btn--ghost reveal">↑ Back to the top</a>
-
-      <footer class="site-footer">
-        <p>Beginner AI session · Built for public sector &amp; business teams</p>
-      </footer>
     </div>
   </section>
 

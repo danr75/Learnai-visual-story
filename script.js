@@ -103,7 +103,52 @@
   }
 
   /* -------------------------------------------------------------
-     5. INIT
+     5. ARROW-KEY / PAGE NAVIGATION
+        Down / Up (and PageDown / PageUp) jump one section at a time.
+     ------------------------------------------------------------- */
+  // Index of the section currently occupying the top of the viewport.
+  function currentSectionIndex() {
+    const y = window.scrollY + 4;
+    for (let i = sections.length - 1; i >= 0; i--) {
+      if (sections[i].offsetTop <= y) return i;
+    }
+    return 0;
+  }
+
+  // Track a pending target so rapid key presses accumulate mid-scroll.
+  let targetIndex = null;
+  let settleTimer;
+
+  function goToSection(i) {
+    const clamped = Math.max(0, Math.min(sections.length - 1, i));
+    targetIndex = clamped;
+    sections[clamped].scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  // Release the lock once scrolling settles.
+  window.addEventListener('scroll', function () {
+    clearTimeout(settleTimer);
+    settleTimer = setTimeout(function () { targetIndex = null; }, 140);
+  }, { passive: true });
+
+  window.addEventListener('keydown', function (e) {
+    // Don't hijack typing or modifier combos.
+    const tag = (document.activeElement && document.activeElement.tagName) || '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || document.activeElement.isContentEditable) return;
+    if (e.altKey || e.ctrlKey || e.metaKey) return;
+
+    let dir = 0;
+    if (e.key === 'ArrowDown' || e.key === 'PageDown') dir = 1;
+    else if (e.key === 'ArrowUp' || e.key === 'PageUp') dir = -1;
+    if (dir === 0) return;
+
+    e.preventDefault();
+    const base = targetIndex != null ? targetIndex : currentSectionIndex();
+    goToSection(base + dir);
+  });
+
+  /* -------------------------------------------------------------
+     6. INIT
      ------------------------------------------------------------- */
   window.addEventListener('scroll', updateProgress, { passive: true });
   window.addEventListener('resize', updateProgress);
