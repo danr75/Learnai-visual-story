@@ -147,7 +147,7 @@ a { color: inherit; text-decoration: none; }
   padding: 4px 14px; margin-bottom: 18px;
 }
 .section-head h2 { font-size: clamp(28px, 4vw, 46px); margin-bottom: 14px; }
-.section-sub { color: var(--muted); font-size: clamp(16px, 1.6vw, 19px); }
+.section-sub { color: var(--muted); font-size: clamp(16px, 1.6vw, 19px); line-height: 1.65; }
 
 .eyebrow {
   display: inline-block; color: var(--cyan); font-weight: 600;
@@ -182,11 +182,7 @@ a { color: inherit; text-decoration: none; }
 }
 .hero__content { position: relative; z-index: 5; max-width: 880px; }
 .hero__title { font-size: clamp(38px, 7vw, 86px); font-weight: 700; letter-spacing: -1px; }
-.hero__lede {
-  margin: 26px auto 36px; max-width: 620px;
-  font-size: clamp(17px, 2vw, 21px); color: var(--muted);
-}
-.hero__cta { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.hero__cta { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 40px; }
 
 /* Buttons */
 .btn {
@@ -278,39 +274,24 @@ a { color: inherit; text-decoration: none; }
 }
 .tilt-card:hover::before { opacity: 1; }
 .tilt-card:hover { box-shadow: 0 20px 50px rgba(0, 0, 0, .45); }
-.tilt-card__icon { font-size: 44px; margin-bottom: 14px; }
-.tilt-card h3 { font-size: 19px; margin-bottom: 8px; }
-.tilt-card p { color: var(--muted); font-size: 15px; }
+.tilt-card__icon { font-size: 52px; line-height: 1; margin-bottom: 18px; }
+.tilt-card h3 { font-size: 19px; margin-bottom: 10px; }
+.tilt-card p { color: var(--muted); font-size: 15px; line-height: 1.55; }
 
-/* Accent top borders per card */
+/* Accent top borders + matching icon colour per card */
 .tilt-card[data-accent="red"]    { border-top: 3px solid var(--red); }
 .tilt-card[data-accent="blue"]   { border-top: 3px solid var(--blue); }
 .tilt-card[data-accent="green"]  { border-top: 3px solid var(--green); }
 .tilt-card[data-accent="violet"] { border-top: 3px solid var(--violet); }
-
-/* =================================================================
-   HUMAN ROLE CALLOUT
-   ================================================================= */
-.human-role {
-  display: flex; align-items: center; gap: 18px;
-  background: linear-gradient(100deg, rgba(52, 211, 153, .12), rgba(52, 211, 153, .03));
-  border: 1px solid rgba(52, 211, 153, .35);
-  border-left: 4px solid var(--green);
-  border-radius: 14px; padding: 18px 22px;
-  max-width: 760px; margin: 0 auto;
-}
-.human-role p { font-size: 16px; color: var(--text); }
-.human-role__badge {
-  flex-shrink: 0; background: var(--green); color: #052e1a;
-  font-weight: 700; font-size: 12px; letter-spacing: 1px; text-transform: uppercase;
-  padding: 6px 12px; border-radius: 8px;
-}
-.human-role--inline { margin: 22px 0 0; }
+.tilt-card[data-accent="red"]    .tilt-card__icon { color: var(--red); }
+.tilt-card[data-accent="blue"]   .tilt-card__icon { color: var(--blue); }
+.tilt-card[data-accent="green"]  .tilt-card__icon { color: var(--green); }
+.tilt-card[data-accent="violet"] .tilt-card__icon { color: var(--violet); }
 
 /* =================================================================
    YOUTUBE EMBED
    ================================================================= */
-.video-embed { max-width: 760px; margin: 44px auto 0; text-align: center; }
+.video-embed { max-width: 820px; margin: 56px auto 0; text-align: center; }
 .video-embed__frame {
   position: relative; padding-top: 56.25%; /* 16:9 */
   border-radius: var(--radius); overflow: hidden;
@@ -318,11 +299,6 @@ a { color: inherit; text-decoration: none; }
 }
 .video-embed__frame iframe {
   position: absolute; inset: 0; width: 100%; height: 100%; border: 0;
-}
-.video-embed__caption { margin-top: 12px; color: var(--muted); font-size: 14px; }
-.video-embed__caption code {
-  background: var(--surface-2); padding: 2px 7px; border-radius: 5px;
-  color: var(--amber); font-size: 13px;
 }
 
 /* =================================================================
@@ -348,13 +324,17 @@ a { color: inherit; text-decoration: none; }
 .flow.is-visible .flow__node[data-step="5"] { transition-delay: .85s; }
 
 .flow__dot {
-  font-size: 34px; width: 64px; height: 64px; line-height: 64px;
-  margin: 0 auto 12px; border-radius: 50%;
+  font-size: 40px; width: 72px; height: 72px; line-height: 72px;
+  margin: 0 auto 14px; border-radius: 50%;
   background: var(--bg); border: 1px solid var(--line);
   box-shadow: inset 0 0 18px rgba(34, 211, 238, .15);
 }
-.flow__node h4 { font-size: 17px; margin-bottom: 4px; }
-.flow__node p { font-size: 13px; color: var(--muted); }
+/* Colour the icon glyphs to match each flow's theme */
+.flow--loop .flow__dot  { color: var(--cyan); }
+.flow--agent .flow__dot { color: var(--violet); }
+.flow__node--gate .flow__dot { color: var(--green); }
+.flow__node h4 { font-size: 17px; margin-bottom: 5px; }
+.flow__node p { font-size: 13px; color: var(--muted); line-height: 1.5; }
 .flow__node--gate { border-color: var(--green); box-shadow: 0 0 26px rgba(52, 211, 153, .25); }
 
 /* Glowing connector lines with travelling pulse */
@@ -391,8 +371,8 @@ a { color: inherit; text-decoration: none; }
 }
 .agent-memory::before { left: 46px; }
 .agent-memory::after  { right: 46px; }
-.agent-memory__icon { font-size: 32px; color: var(--violet); flex-shrink: 0; }
-.agent-memory p { font-size: 15px; color: var(--text); text-align: left; }
+.agent-memory__icon { font-size: 38px; color: var(--violet); flex-shrink: 0; }
+.agent-memory p { font-size: 15px; color: var(--text); text-align: left; line-height: 1.55; }
 .agent-memory strong { color: var(--violet); }
 
 /* =================================================================
@@ -417,7 +397,7 @@ a { color: inherit; text-decoration: none; }
   border: 1px solid var(--line); border-radius: var(--radius);
   padding: 30px; text-align: center; box-shadow: 0 20px 50px rgba(0, 0, 0, .35);
 }
-.mini-flow__arrow { color: var(--cyan); font-size: 22px; margin: 12px 0; }
+.mini-flow__arrow { color: var(--cyan); font-size: 30px; margin: 14px 0; line-height: 1; }
 .mini-flow__model, .gen-flow__model {
   background: var(--bg); border: 1px solid var(--violet);
   border-radius: 14px; padding: 16px; font-weight: 600;
@@ -513,12 +493,13 @@ a { color: inherit; text-decoration: none; }
 }
 .risk-card:hover { transform: translateY(-6px); border-color: var(--amber); }
 .risk-card__ico {
-  font-size: 32px; display: inline-flex; width: 58px; height: 58px;
+  font-size: 38px; color: var(--amber);
+  display: inline-flex; width: 64px; height: 64px;
   align-items: center; justify-content: center; border-radius: 14px;
-  background: rgba(251, 191, 36, .12); margin-bottom: 14px;
+  background: rgba(251, 191, 36, .12); margin-bottom: 16px;
 }
-.risk-card h4 { font-size: 18px; margin-bottom: 6px; }
-.risk-card p { color: var(--muted); font-size: 15px; }
+.risk-card h4 { font-size: 18px; margin-bottom: 8px; }
+.risk-card p { color: var(--muted); font-size: 15px; line-height: 1.55; }
 
 /* =================================================================
    HOW WORK CHANGES — shift + impact
@@ -562,12 +543,13 @@ a { color: inherit; text-decoration: none; }
 }
 .role-card:hover { transform: translateY(-8px); border-color: var(--pink); }
 .role-card__ico {
-  font-size: 34px; width: 60px; height: 60px; line-height: 60px;
-  margin: 0 auto 14px; border-radius: 50%;
+  font-size: 38px; color: var(--pink);
+  width: 66px; height: 66px; line-height: 66px;
+  margin: 0 auto 16px; border-radius: 50%;
   background: rgba(236, 72, 153, .12); border: 1px solid rgba(236, 72, 153, .3);
 }
-.role-card h4 { font-size: 16px; margin-bottom: 8px; }
-.role-card p { color: var(--muted); font-size: 14px; }
+.role-card h4 { font-size: 16px; margin-bottom: 8px; line-height: 1.3; }
+.role-card p { color: var(--muted); font-size: 14px; line-height: 1.5; }
 
 /* =================================================================
    CLOSING + DISCUSSION
@@ -599,8 +581,6 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 16px; box-shadow: var(--glow);
 }
 .q-card p { font-size: 19px; font-weight: 500; }
-
-.site-footer { margin-top: 50px; color: var(--muted); font-size: 14px; }
 
 /* =================================================================
    RESPONSIVE
